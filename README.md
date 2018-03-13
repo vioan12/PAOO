@@ -1,1 +1,1 @@
-# PAOO
+# Proiectarea Aplicatiilor Orientate pe Obiecte
