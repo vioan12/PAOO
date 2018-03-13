@@ -15,25 +15,28 @@ public class ReadFile
         Execute();
         Close();
     }
-    private void Initialization()
+    private void initialization()
             throws Exception
     {
         readString = "";
         in = new FileReader(nameFile);
         br = new BufferedReader(in);
     }
-    private void Close()
+    private void close()
             throws Exception
     {
         in.close();
         br.close();
     }
-    private void Execute()
+    private void execute()
             throws Exception
     {
-        readString = br.readLine();
+        String line;
+        while((line = br.readLine()) != null){
+            readString = readString + line;
+        }
     }
-    public String GetReadString()
+    public String getReadString()
     {
         return readString;
     }

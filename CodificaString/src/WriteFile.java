@@ -16,8 +16,9 @@ public class WriteFile
         out = new FileWriter(nameFile);
     }
     public void Write(String writeString)
+            throws Exception
     {
-
+        out.write(writeString);
     }
     private void Close()
             throws Exception
