@@ -8,19 +8,21 @@ public class WriteFile
             throws Exception
     {
         this.nameFile = nameFile;
-        Initialization();
+        initialization();
     }
-    private void Initialization()
+    private void initialization()
             throws Exception
     {
         out = new FileWriter(nameFile);
     }
-    public void Write(String writeString)
+    public void write(byte[] writeString)
             throws Exception
     {
-        out.write(writeString);
+        for(int i=0; i<writeString.length; i++)
+        out.write(Character.toString ((char) writeString[i]));
+        close();
     }
-    private void Close()
+    private void close()
             throws Exception
     {
         out.close();

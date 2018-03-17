@@ -8,18 +8,6 @@ public class Encoder
         this.endRange = endRange;
         this.randValue = randValue;
     }
-    private void FindMinMaxAsciiInterval()
-    {
-        asciiMinValue = asciiMaxValue = encodeString.charAt(0);
-        for(int i=1; i<encodeString.length(); i++){
-            if(encodeString.charAt(i) > asciiMaxValue){
-                asciiMaxValue = encodeString.charAt(i);
-            }
-            if(encodeString.charAt(i) < asciiMinValue){
-                asciiMinValue = encodeString.charAt(i);
-            }
-        }
-    }
     public byte[] encode(byte[] inputData)
     {
         byte[] retVal = new byte[inputData.length];

@@ -4,16 +4,14 @@ import java.io.FileReader;
 public class ReadFile
 {
     private String nameFile;
-    private String readString;
     private FileReader in;
     private BufferedReader br;
+    private String readString;
     ReadFile(String nameFile)
             throws Exception
     {
         this.nameFile = nameFile;
-        Initialization();
-        Execute();
-        Close();
+        initialization();
     }
     private void initialization()
             throws Exception
@@ -28,17 +26,14 @@ public class ReadFile
         in.close();
         br.close();
     }
-    private void execute()
+    public String execute()
             throws Exception
     {
         String line;
         while((line = br.readLine()) != null){
             readString = readString + line;
         }
-    }
-    public String getReadString()
-    {
+        close();
         return readString;
     }
-
 }
