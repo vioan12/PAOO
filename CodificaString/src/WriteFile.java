@@ -19,7 +19,8 @@ public class WriteFile
             throws Exception
     {
         for(int i=0; i<writeString.length; i++)
-        out.write(Character.toString ((char) writeString[i]));
+            out.write(Integer.toBinaryString(writeString[i]));
+        //out.write(Character.toString ((char) writeString[i]));
         close();
     }
     private void close()
